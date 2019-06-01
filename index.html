@@ -38,12 +38,14 @@
         }
         return obj;
       }
-      
+      alert("this is the first test");
       $(document).ready(function(){
         if (getAllUrlParams().cart) {
           $.get("https://www.lexaloffle.com/bbs/?pid="+getAllUrlParams().cart+"#p", function(data, status){
             alert("this is the second test");
           });
+        } else {
+          alert("this is the third test");
         }
       });
     </script>
