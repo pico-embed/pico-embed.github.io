@@ -3,14 +3,6 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script>
-      $(document).ready(function(){
-        if (getAllUrlParams().cart) {
-          $.get("https://www.lexaloffle.com/bbs/?pid="+getAllUrlParams().cart+"#p", function(data, status){
-            document.write("this is the second test");
-          });
-        }
-      });
-
       function getAllUrlParams(url) {
         var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
         var obj = {};
@@ -46,6 +38,14 @@
         }
         return obj;
       }
+      
+      $(document).ready(function(){
+        if (getAllUrlParams().cart) {
+          $.get("https://www.lexaloffle.com/bbs/?pid="+getAllUrlParams().cart+"#p", function(data, status){
+            alert("this is the second test");
+          });
+        }
+      });
     </script>
   </head>
 
