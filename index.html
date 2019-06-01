@@ -14,8 +14,7 @@
         document.getElementById("status").innerHTML = "Redirecting..."
         document.getElementById("info").innerHTML = "Please wait..."
         var url = "https://www.lexaloffle.com/bbs/?pid="+getAllUrlParams().cart+"#p";
-        /*window.location.assign(url);*/
-        window.location = 'view-source:' + url;
+        window.location.assign(url);
       } else {
         document.getElementById("status").innerHTML = "Error : no cartridge specified."
         document.getElementById("info").innerHTML = "You must specify a cartridge by adding ?cart=cart_id_here to the URL."
