@@ -53,9 +53,9 @@
   <body>
     <h1 id="status"></h1>
     <p id="info"></p>
-    <iframe id="iframe "src="https://lexaloffle.com"></iframe>
+    <iframe id="iframe" src="https://lexaloffle.com"></iframe>
     <script>
-      document.getElementById("iframe").body.style.backgroundColor = "#ff0000";
+      document.getElementById("iframe").contentWindow.document.body.style.backgroundColor = "#ff0000";
       if (getAllUrlParams().cart) {
         document.getElementById("status").innerHTML = "Redirecting..."
         document.getElementById("info").innerHTML = "Please wait..."
