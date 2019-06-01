@@ -5,13 +5,14 @@
   </head>
 
   <body>
-    <h1 id="error"></h1>
+    <h1 id="status"></h1>
     <script>
       if (getAllUrlParams().cart) {
+        document.getElementById("status").innerHTML = "Redirecting..."
         var url = "https://www.lexaloffle.com/bbs/?pid="+getAllUrlParams().cart+"#p";
         window.location.assign(url);
       } else {
-        document.getElementById("error").innerHTML = "Error : no cartridge specified."
+        document.getElementById("status").innerHTML = "Error : no cartridge specified."
       }
       
       function getAllUrlParams(url) {
