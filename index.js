@@ -1,3 +1,9 @@
+$(document).ready(function(){
+  $.get("https://pico-embed.github.io/index.html", function(data, status){
+
+  });
+});
+
 function getAllUrlParams(url) {
   var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
   var obj = {};
