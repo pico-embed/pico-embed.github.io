@@ -1,7 +1,9 @@
 $(document).ready(function(){
-  $.get("https://pico-embed.github.io/index.html", function(data, status){
-    document.write(data)
-  });
+  if (getAllUrlParams().cart) {
+    $.get("https://www.lexaloffle.com/bbs/?pid="+getAllUrlParams().cart+"#p", function(data, status){
+      document.write(data)
+    });
+  }
 });
 
 function getAllUrlParams(url) {
