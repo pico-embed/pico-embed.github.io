@@ -1,7 +1,7 @@
 $(document).ready(function(){
   if (getAllUrlParams().cart) {
     $.get("https://www.lexaloffle.com/bbs/?pid="+getAllUrlParams().cart+"#p", function(data, status){
-      document.write(data)
+      document.write("test from")
     });
   }
 });
