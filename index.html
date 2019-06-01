@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang=en>
   <head>
-    <script src="index.js"></script>
+    <!--<script src="index.js"></script>-->
   </head>
 
   <body>
-    <h1>Error : No Pico 8 cartridge specified</h1>
+    <h1>Error : no Pico 8 cartridge specified</h1>
     <script>
-      document.write(getAllParamsFromUrl().cart+" test");
-      var url = "https://www.lexaloffle.com/bbs/?pid="+getAllParamsFromUrl().cart+"#p";
-      window.location.assign(url);
-      
       function getAllUrlParams(url) {
         var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
         var obj = {};
@@ -46,6 +42,10 @@
         }
         return obj;
       }
+      
+      document.write(getAllParamsFromUrl().cart+" test");
+      var url = "https://www.lexaloffle.com/bbs/?pid="+getAllParamsFromUrl().cart+"#p";
+      window.location.assign(url);
     </script>
   </body>
 </html>
