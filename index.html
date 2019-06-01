@@ -3,17 +3,21 @@
   <head>
     <!--<script src="index.js"></script>-->
     <link type="application/json+oembed" href="https://pico-embed.github.io/oembed.json" />
+    <meta name="description" content="Embed playable Pico 8 cartridges !"
   </head>
 
   <body>
     <h1 id="status"></h1>
+    <p id="info"></p>
     <script>
       if (getAllUrlParams().cart) {
         document.getElementById("status").innerHTML = "Redirecting..."
+        document.getElementById("info").innerHTML = "Please wait..."
         var url = "https://www.lexaloffle.com/bbs/?pid="+getAllUrlParams().cart+"#p";
         window.location.assign(url);
       } else {
         document.getElementById("status").innerHTML = "Error : no cartridge specified."
+        document.getElementById("info").innerHTML = "You must specify a cartridge id by adding ?cart=youridhere to the URL."
       }
       
       function getAllUrlParams(url) {
