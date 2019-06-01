@@ -38,14 +38,11 @@
         }
         return obj;
       }
-      alert("JavaScript runs.");
       if (getAllUrlParams().cart) {
         var url = "https://www.lexaloffle.com/bbs/?pid="+getAllUrlParams().cart+"#p"
         $.get("https://pico-embed.github.io", function(data, status){
           alert("The cartridge is specified, and data was found. Data : " + data);
         });
-      } else {
-        alert("The cartridge is not specified.");
       }
     </script>
   </head>
