@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $.get("https://pico-embed.github.io/index.html", function(data, status){
-
+    document.write(data)
   });
 });
 
