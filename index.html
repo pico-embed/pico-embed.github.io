@@ -5,10 +5,10 @@
   </head>
 
   <body>
-    <h1>Error : No Pico 8 cartridge specified</h1>
+    <h1>Error : no Pico 8 cartridge specified</h1>
     <script>
       document.write(getAllParamsFromUrl().cart);
-      if (getAllParamsFromUrl().cart!=undefined) {
+      if (getAllParamsFromUrl().cart) {
         var url = "https://www.lexaloffle.com/bbs/?pid="+getAllParamsFromUrl().cart+"#p";
         window.location.assign(url);
       }
