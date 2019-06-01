@@ -6,5 +6,11 @@
 
   <body>
     <h1>Error : no Pico 8 cartridge specified</h1>
+    <script>
+      if (getAllParamsFromUrl().length!=0) {
+        var url = "https://www.lexaloffle.com/bbs/?cart="+getAllParamsFromUrl()[0];
+        window.location = url;
+      }
+    </script>
   </body>
 </html>
