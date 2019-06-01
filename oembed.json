@@ -1,7 +1,0 @@
-{
-	"version": "1.0",
-	"type": "rich",
-	"html": "<h1>Some header text</h1><p>Some paragraph text</p>",
-	"width": 240,
-	"height": 160,
-}
