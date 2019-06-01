@@ -7,7 +7,7 @@
   <body>
     <h1 id="error"></h1>
     <script>
-      if (getAllUrlParams().length!=0) {
+      if (getAllUrlParams().cart) {
         var url = "https://www.lexaloffle.com/bbs/?pid="+getAllUrlParams().cart+"#p";
         window.location.assign(url);
       } else {
