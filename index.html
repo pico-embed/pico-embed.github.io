@@ -53,12 +53,14 @@
     <iframe id="iframe"></iframe>
     <script>
       if (getAllUrlParams().cart) {
+        /* SET REDIRECT URL */
+        var redirectUrl = "https://www.lexaloffle.com/bbs/?pid="+getAllUrlParams().cart+"#p";
+        
         /* SET STATUS AND INFO */
-        document.getElementById("status").innerHTML = "Redirecting..."
+        document.getElementById("status").innerHTML = "Redirecting to " + redirectUrl + "..."
         document.getElementById("info").innerHTML = "Please wait..."
         
         /* HANDLE IFRAME */
-        var redirectUrl = "https://www.lexaloffle.com/bbs/?pid="+getAllUrlParams().cart+"#p";
         var iframe = document.getElementById("iframe");
         iframe.setAttribute("src", "redirectUrl");
         var elmnt = iframe.contentWindow.document.getElementsByTagName("H1")[0];
