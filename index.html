@@ -63,10 +63,10 @@
         /* HANDLE IFRAME */
         var iframe = document.getElementById("iframe");
         iframe.setAttribute("src", "redirectUrl");
-        var elmnt = iframe.contentWindow.document.getElementsByTagName("H1")[0];
-        elmnt.style.display = "none";
+        /*var elmnt = iframe.contentWindow.document.getElementsByTagName("h1")[0];
+        elmnt.style.display = "none";*/
         
-        /* REDIRECT CLIENT */        
+        /* REDIRECT CLIENT */
         window.location.assign(redirectUrl);
       } else {
         /* SET STATUS AND INFO */
