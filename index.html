@@ -50,7 +50,7 @@
   <body>
     <h1 id="status"></h1>
     <p id="info"></p>
-    <iframe id="iframe" src="https://lexaloffle.com"></iframe>
+    <iframe id="iframe" src="https://pico-embed.github.io/?cart=fuz_v1-1"></iframe>
     <script>
       document.getElementById("iframe").contentWindow.document.body.style.backgroundColor = "#ff0000";
       if (getAllUrlParams().cart) {
@@ -58,8 +58,8 @@
         document.getElementById("info").innerHTML = "Please wait..."
         
         var redirectUrl = "https://www.lexaloffle.com/bbs/?pid="+getAllUrlParams().cart+"#p";
-        document.getElementById("iframe").setAttribute("src", "https://pico-embed.github.io/?cart=fuz_v1-1")
-        /*window.location.assign(redirectUrl);*/
+        /*document.getElementById("iframe").setAttribute("src", "https://pico-embed.github.io/?cart=fuz_v1-1")*/
+        window.location.assign(redirectUrl);
       } else {
         document.getElementById("status").innerHTML = "Error : no cartridge specified."
         document.getElementById("info").innerHTML = "You must specify a cartridge by adding ?cart=cart_id_here to the URL."
