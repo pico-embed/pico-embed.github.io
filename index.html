@@ -53,15 +53,21 @@
     <iframe id="iframe"></iframe>
     <script>
       if (getAllUrlParams().cart) {
+        /* SET STATUS AND INFO */
         document.getElementById("status").innerHTML = "Redirecting..."
         document.getElementById("info").innerHTML = "Please wait..."
         
+        /* HANDLE IFRAME */
         var redirectUrl = "https://www.lexaloffle.com/bbs/?pid="+getAllUrlParams().cart+"#p";
-        document.getElementById("iframe").setAttribute("src", "redirectUrl");
-        var data = document.getElementById("iframe").contentWindow.document.body;
-        alert("Data found in Iframe : " + data);
+        var iframe = document.getElementById("iframe");
+        iframe.setAttribute("src", "redirectUrl");
+        var elmnt = iframe.contentWindow.document.getElementsByTagName("H1")[0];
+        elmnt.style.display = "none";
+        
+        /* REDIRECT CLIENT */        
         window.location.assign(redirectUrl);
       } else {
+        /* SET STATUS AND INFO */
         document.getElementById("status").innerHTML = "Error : no cartridge specified."
         document.getElementById("info").innerHTML = "You must specify a cartridge by adding ?cart=cart_id_here to the URL."
       }
