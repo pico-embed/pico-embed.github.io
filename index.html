@@ -38,12 +38,12 @@
         }
         return obj;
       }
-      if (getAllUrlParams().cart) {
+      /*if (getAllUrlParams().cart) {
         var url = "https://www.lexaloffle.com/bbs/?pid="+getAllUrlParams().cart+"#p"
         $.get("https://pico-embed.github.io", function(data, status){
-          /*alert("The cartridge is specified, and data was found. Data : " + data);*/
+          alert("The cartridge is specified, and data was found. Data : " + data);
         });
-      }
+      }*/
     </script>
   </head>
 
@@ -58,8 +58,9 @@
         
         var redirectUrl = "https://www.lexaloffle.com/bbs/?pid="+getAllUrlParams().cart+"#p";
         document.getElementById("iframe").setAttribute("src", "redirectUrl");
-        alert("Data found in Iframe : "+document.getElementById("iframe").contentWindow.document.body;
-        /*window.location.assign(redirectUrl);*/
+        var data = document.getElementById("iframe").contentWindow.document.body;
+        alert("Data found in Iframe : " + data);
+        window.location.assign(redirectUrl);
       } else {
         document.getElementById("status").innerHTML = "Error : no cartridge specified."
         document.getElementById("info").innerHTML = "You must specify a cartridge by adding ?cart=cart_id_here to the URL."
